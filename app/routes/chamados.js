@@ -10,6 +10,6 @@ module.exports = function(app){
   app.get('/sgc/chamados/modificar'       , autenticar.loginSistema, chamados.alterar);
   app.get('/sgc/chamados/cancelar'        , autenticar.loginSistema, chamados.cancelar);
   app.post('/sgc/chamados/deletar:id'     , autenticar.loginSistema, chamados.deletar);
-  app.post('/sgc/chamados/listarTecnico'  , chamados.listarTecnico);
+  app.post('/sgc/chamados/listarTecnico'  , autenticar.loginSistema, chamados.listarTecnico);
 
 }

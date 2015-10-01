@@ -12,6 +12,6 @@ module.exports = function(app){
   app.post('/sgc/user/deletar:id'   ,autenticar.loginSistema, user.deletar);
   app.post('/sgc/user/update:id'    ,autenticar.loginSistema, user.alterar);
   app.post('/sgc/user/pesquisar:id' ,autenticar.loginSistema, user.pesquisar);
-  //app.post('/sgc/tecnicos/inserir'  , autenticar.loginSistema, tecnico.inserir);
+  //app.get('/inserir'  , user.prioridade);
 
 }

@@ -1,5 +1,6 @@
 module.exports = function(app) {
   var User = app.models.user;
+  var Prioridade = app.models.prioridade;
   var userIndex = {
     home: function(req,res){
       res.render('index');
@@ -59,6 +60,6 @@ module.exports = function(app) {
         res.json(err);
       });
     }
-  }
+  };
   return userIndex;
 }

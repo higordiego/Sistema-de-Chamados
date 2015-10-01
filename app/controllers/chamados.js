@@ -51,7 +51,7 @@ module.exports = function(app){
       }
     },
     listar: function(req,res){
-      Chamados.find({resolvido: 0, user: req.user._id,}).populate({
+      Chamados.find({resolvido: 0}).populate({
         path: 'user',
         select: 'email admin nome'
       }).populate('chamados').exec(function (err, chamados) {
@@ -72,15 +72,14 @@ module.exports = function(app){
       });
     },
     listarTecnico: function(req,res){
-      if(req.user.admin == true){
-        Chamados.find({resolvido: 0}).populate({
+      var id = req.user._id;
+        Chamados.find({resolvido: 0,user: req.user._id}).populate({
           path: 'user',
           select: 'email admin nome'
         }).populate('chamados').exec(function (err, chamados) {
           if (err) {
             res.json(err);
           } else {
-            console.log(chamados);
             for (var i = 0; i < chamados.length; i++) {
               if(chamados[i].prioridade == 1){
                 chamados[i].prioridade = 'Alta';
@@ -92,11 +91,8 @@ module.exports = function(app){
             }
             res.json(chamados);
           }
-
         });
-      }else{
-        res.send(403);
-      }
+
     },
     update: function(req,res){
       if(req.user.admin == true){
@@ -105,8 +101,6 @@ module.exports = function(app){
         chamados._id = req.params.id;
         chamados.resolvido = 1;
         Chamados.update({_id: chamados._id}, {$set: {resolvido: chamados.resolvido, solucao: chamados.solucao}}, function(err,chamados){
-          console.log(err);
-          console.log(chamados);
         });
       }else{
         res.send(403);
@@ -114,7 +108,6 @@ module.exports = function(app){
     },
     deletar: function(req,res){
         Chamados.remove({_id: req.params.id},function(err){
-          res.json(err);
         });
     },
     cancelar: function(req,res){

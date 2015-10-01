@@ -4,7 +4,6 @@ app.controller('tecnicoCtrl', function($scope,$http){
   var refresh = function(){
     $http.post('/sgc/chamados/listarTecnico').success(function(res){
       $scope.chamadoslist = res;
-      console.log(res);
       $scope.chamados = "";
     });
   };
@@ -23,8 +22,8 @@ app.controller('chamadosCtrl', function($scope,$http){
     });
   };
   refresh();
-  $scope.deletar = function(id){
-    $http.post('/sgc/chamados/deletar' +id);
-    refresh();
+  $scope.solucao = function(chamados){
+    $http.post('/sgc/chamados/update' +chamados._id, chamados);
+    window.location.reload(true);
   };
 });
