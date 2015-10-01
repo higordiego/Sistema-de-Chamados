@@ -1,0 +1,86 @@
+<script src="../../controllers/empresas.js"></script>
+<div class="container" ng-controller="empresasCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Lista de Empresa</h4>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th>Nome Fantasia</th>
+            <th>Telefone 1</th>
+            <th>Telefone 2</th>
+            <th>Email</th>
+            <th>Endereço </th>
+            <th> Cidade </th>
+            <th>Editar</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="empresas in empresaslist">
+              <td> {{empresas.fantasia}} </td>
+              <td> {{empresas.telefone.numero1}} </td>
+              <td> {{empresas.telefone.numero2}} </td>
+              <td> {{empresas.email}} </td>
+              <td> {{empresas.endereco}} </td>
+              <td> {{empresas.cidade}} </td>
+              <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-hdd"></span></button></p></td>
+            </tr>
+                <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <div class="container">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                            <h4 class="modal-title custom_align">Solução</h4>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <textarea rows="6" class="form-control" name="solucao" required></textarea>
+                        </div>
+                        <div class="modal-footer ">
+                          <button type="submit" class="btn btn-primary" ng-click="solucao(empresa)" data-dismiss="modal"> Salvar </button>
+                        </div>
+                      </div>
+                    <!-- /.modal-dialog -->
+                  </div>
+                  <!-- /.modal-content -->
+                </div>
+              </td>
+              <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                      <h4 class="modal-title custom_align" id="Heading">Agendamento </h4>
+                    </div>
+                    <div class="modal-body">
+
+                      Data <input type="date" class="form-control" name="data" placeholder="Horário de Agendamento"/> </br>
+                      Horário <input type="time" class="form-control" name="data" placeholder="Horário de Agendamento"/> </br>
+                    </div>
+                    <div class="modal-footer ">
+                      <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+              </div>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+      <!--
+      <div class="clearfix"></div>
+      <ul class="pagination pull-right">
+      <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+    </ul>
+  -->
+</div>
+</div>
+</div>
