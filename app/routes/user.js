@@ -3,8 +3,10 @@ module.exports = function(app){
   , passport = require('passport')
   , user = app.controllers.user;
   app.get('/sgc/user/cadastrar', function(req,res){
-    res.render('sgc/usuario/cadastrar')
-  })
+    res.render('sgc/usuario/cadastrar',{
+      user: req.user
+    });
+  });
   app.post('/sgc/user/listar'       ,autenticar.loginSistema, user.listar);
   app.post('/sgc/user/cadastrar'    ,autenticar.loginSistema, user.cadastrar);
   app.post('/sgc/user/deletar:id'   ,autenticar.loginSistema, user.deletar);

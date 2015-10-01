@@ -17,7 +17,7 @@ var express = require('express')
 
 //Conexão com Banco de Dados
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://chamados:chamadosa1b2@ds051853.mongolab.com:51853/chamados', function(err){
+mongoose.connect('mongodb://chamados:chamados@ds051903.mongolab.com:51903/chamados', function(err){
   // mongoose.connect('mongodb://bulaapi:bulaapi@ds031982.mongolab.com:31982/bula', function(err){
   if( err ) {
     console.log("Error conectar mongo db: " + err);
@@ -71,7 +71,6 @@ function verificaLogin(username, password, done){
     User.findOne({ 'email': username }, function (err, result) {
         if(err) { console.log("ERROR: " + err); }
         else {
-          console.log('entrei');
             if(result){
                 if(result.email == username && pass.validate(result.password, password)) {
                     done(null, result);

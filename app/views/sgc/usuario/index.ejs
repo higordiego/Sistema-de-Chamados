@@ -10,6 +10,7 @@
               <th>Nome </th>
               <th>email </th>
               <th>senha </th>
+              <th>Permissão</th>
               <th>Ações </th>
             </tr>
           </thead>
@@ -25,6 +26,13 @@
                 <input type="password" class="form-control" ng-model="users.password">
               </td>
               <td>
+                <select ng-model="users.admin" class="form-control">
+                  <option value="">Selecione</option>
+                  <option value="1">Comum</option>
+                  <option value="2">Administrador</option>
+                </select>
+              </td>
+              <td>
                 <button type="submit" class="btn btn-primary" ng-click="addUser()">Adicionar</button>
                 <button type="submit" class="btn btn-info" ng-click="update()"> Alterar </button>
               </td>
@@ -32,6 +40,7 @@
                 <td> {{users.nome}} </td>
                 <td> {{users.email}} </td>
                 <td> {{users.password}} </td>
+                <td> {{users.admin}} </td>
                 <td>
                   <button class="btn btn-warning" ng-click="edit(users._id)">Editar</button>
                   <button class="btn btn-danger" ng-click="remove(users._id)">Remover</button>

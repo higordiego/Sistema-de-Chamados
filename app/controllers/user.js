@@ -16,6 +16,9 @@ module.exports = function(app) {
       user.nome = req.body.nome;
       user.email = req.body.email;
       user.password = req.body.password;
+      if(req.body.admin == 2){
+        user.admin = true;
+      }
       user.save(function(err,user){
         res.json(user);
       });
@@ -26,7 +29,10 @@ module.exports = function(app) {
       user.nome = req.body.nome;
       user.email = req.body.email;
       user.password = req.body.password;
-      User.update({_id: user._id}, {$set: {nome: user.nome, email:user.email,password: user.password}}, function(err,user){
+      if(req.body.admin == 2){
+        user.admin = true;
+      }
+      User.update({_id: user._id}, {$set: {nome: user.nome, email:user.email,password: user.password, admin: user.admin}}, function(err,user){
         console.log(err);
       });
     },

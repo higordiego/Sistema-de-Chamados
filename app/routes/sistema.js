@@ -8,7 +8,9 @@ module.exports = function(app){
   //, prioridade = app.controllers.prioridade
   , chamados = app.controllers.chamados;
   app.get('/sgc', autenticar.loginSistema,function(req,res){
-    res.render('sgc/index');
+    res.render('sgc/index',{
+      user: req.user
+    });
   });
   app.get('/sgc/cliente/cadastrar'  , autenticar.loginSistema, cliente.cadastrar);
   app.get('/sgc/cliente/modificar'  , autenticar.loginSistema, cliente.alterar);

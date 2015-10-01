@@ -43,12 +43,15 @@ module.exports = function(app){
     alterar: function(req,res){
       Cliente.find(function(err,cliente){
         res.render('sgc/cliente/alterar',{
-          cliente: cliente
+          cliente: cliente,
+          user: req.user
         });
       });
     },
     cadastrar: function(req,res){
-      res.render('sgc/cliente/cadastrar');
+      res.render('sgc/cliente/cadastrar',{
+        user: req.user
+      });
     }
   };
   return crudCadastrar;

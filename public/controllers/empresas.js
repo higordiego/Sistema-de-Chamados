@@ -9,8 +9,7 @@ app.controller('empresasCtrl', function($scope,$http){
   };
   refresh();
   $scope.solucao = function(empresa){
-    //$http.post('/sgc/empresa/update' +empresa._id, empresa);
-    console.log(empresa._id);
-    //window.location.reload(true);
+    $http.post('/sgc/empresa/update' +empresa._id, empresa);
+    window.location.reload(true);
   };
 });

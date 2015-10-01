@@ -6,7 +6,4 @@ module.exports = function(app){
   app.get('/loginerro'  ,user.loginerro)
   app.post('/entrar'    ,passport.authenticate('local', { failureRedirect: '/loginerro'}), user.login);
   app.get('/logout'     ,autenticar.loginSistema, user.deslogar);
-  app.get('/cadastrar'  ,autenticar.loginSistema, user.cadastrar);
-
-
 }

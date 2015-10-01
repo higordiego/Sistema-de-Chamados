@@ -2,7 +2,9 @@ module.exports = function(app){
   var Empresa = app.models.empresa;
   var empresaIndex ={
     cadastrar: function(req,res){
-      res.render('sgc/empresa/cadastrar');
+      res.render('sgc/empresa/cadastrar',{
+        user: req.user
+      });
     },
     inserir: function(req,res){
       var empresa = new Empresa();
@@ -49,7 +51,9 @@ module.exports = function(app){
       }
     },
     alterar: function(req,res){
-        res.render('sgc/empresa/alterar');
+        res.render('sgc/empresa/alterar',{
+          user: req.user
+        });
     },
     listar: function(req,res){
       Empresa.find(function(err,empresa){

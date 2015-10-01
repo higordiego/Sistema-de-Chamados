@@ -1,0 +1,32 @@
+<script src="../../controllers/chamados.js"></script>
+<div class="container" ng-controller="chamadosCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Lista de Chamados</h4>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th>Prioridade</th>
+            <th>Usuário</th>
+            <th>Problema</th>
+            <th>Observação</th>
+            <th>Email </th>
+            <th>Deletar</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="chamados in chamadoslist">
+              <td> {{chamados.prioridade}} </td>
+              <td> {{chamados.user.nome}} </td>
+              <td> {{chamados.problema}} </td>
+              <td> {{chamados.observacao}} </td>
+              <td> {{chamados.user.email}} </td>
+              <td>
+                <button class="btn btn-primary btn-xs glyphicon glyphicon-trash" ng-click="deletar(chamados._id)" ></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

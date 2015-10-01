@@ -1,0 +1,289 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'mongoose-id-token',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.3
+3 info using node@v4.1.0
+4 verbose install initial load of /home/higor/Documentos/node/crud/package.json
+5 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/async/package.json
+6 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/body-parser/package.json
+7 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/cluster/package.json
+8 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/cookie-parser/package.json
+9 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/crypto/package.json
+10 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/debug/package.json
+11 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/ejs/package.json
+12 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/express/package.json
+13 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/express-flash/package.json
+14 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/express-load/package.json
+15 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/express-session/package.json
+16 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/express-validator/package.json
+17 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/mongoose/package.json
+18 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/mongoose-auto-increment/package.json
+19 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/mongoose-auto-number/package.json
+20 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/mongoose-autoinc/package.json
+21 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/package.json
+22 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/morgan/package.json
+23 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/passport/package.json
+24 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/passport-http/package.json
+25 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/passport-local/package.json
+26 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/react-bootstrap-table/package.json
+27 verbose installManyTop reading scoped package data from /home/higor/Documentos/node/crud/node_modules/serve-favicon/package.json
+28 info package.json cluster@0.7.7 cluster is also the name of a node core module.
+29 info package.json cluster@0.7.7 No license field.
+30 info package.json express-flash@0.0.2 No license field.
+31 info package.json express-load@1.1.15 No license field.
+32 info package.json mongoose-auto-increment@4.0.0 No license field.
+33 info package.json passport-local@1.0.0 No license field.
+34 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+35 info package.json crypto@0.0.3 No license field.
+36 info package.json mongoose-id-token@0.0.3 No license field.
+37 info package.json passport-http@0.3.0 No license field.
+38 verbose readDependencies loading dependencies from /home/higor/Documentos/node/crud/package.json
+39 verbose install mongoose-id-token is installed as 0.0.3
+40 silly cache add args [ 'mongoose-id-token', null ]
+41 verbose cache add spec mongoose-id-token
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'mongoose-id-token',
+42 silly cache add   scope: null,
+42 silly cache add   name: 'mongoose-id-token',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: '*',
+42 silly cache add   type: 'range' }
+43 silly addNamed mongoose-id-token@*
+44 verbose addNamed "*" is a valid semver range for mongoose-id-token
+45 silly addNameRange { name: 'mongoose-id-token', range: '*', hasData: false }
+46 silly mapToRegistry name mongoose-id-token
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry uri https://registry.npmjs.org/mongoose-id-token
+50 verbose addNameRange registry:https://registry.npmjs.org/mongoose-id-token not in flight; fetching
+51 verbose request uri https://registry.npmjs.org/mongoose-id-token
+52 verbose request no auth needed
+53 info attempt registry request try #1 at 13:37:21
+54 verbose request id 1e1c164bc21d45b9
+55 verbose etag "EGSOVSG1UCDR4OKRIWPL510XP"
+56 http request GET https://registry.npmjs.org/mongoose-id-token
+57 http 304 https://registry.npmjs.org/mongoose-id-token
+58 silly get cb [ 304,
+58 silly get   { date: 'Thu, 01 Oct 2015 16:37:22 GMT',
+58 silly get     via: '1.1 varnish',
+58 silly get     'cache-control': 'max-age=60',
+58 silly get     etag: '"EGSOVSG1UCDR4OKRIWPL510XP"',
+58 silly get     age: '0',
+58 silly get     connection: 'keep-alive',
+58 silly get     'x-served-by': 'cache-atl6234-ATL',
+58 silly get     'x-cache': 'MISS',
+58 silly get     'x-cache-hits': '0',
+58 silly get     'x-timer': 'S1443717442.518955,VS0,VE35',
+58 silly get     vary: 'Accept' } ]
+59 verbose etag https://registry.npmjs.org/mongoose-id-token from cache
+60 verbose get saving mongoose-id-token to /home/higor/.npm/registry.npmjs.org/mongoose-id-token/.cache.json
+61 silly addNameRange number 2 { name: 'mongoose-id-token', range: '*', hasData: true }
+62 silly addNameRange versions [ 'mongoose-id-token', [ '0.0.1', '0.0.2', '0.0.3' ] ]
+63 silly addNamed mongoose-id-token@0.0.3
+64 verbose addNamed "0.0.3" is a plain semver version for mongoose-id-token
+65 silly cache afterAdd mongoose-id-token@0.0.3
+66 verbose afterAdd /home/higor/.npm/mongoose-id-token/0.0.3/package/package.json not in flight; writing
+67 verbose afterAdd /home/higor/.npm/mongoose-id-token/0.0.3/package/package.json written
+68 silly install resolved [ { name: 'mongoose-id-token',
+68 silly install resolved     description: 'Creating automatically an uniq token field',
+68 silly install resolved     version: '0.0.3',
+68 silly install resolved     author: { name: 'Sebastian Müller' },
+68 silly install resolved     dependencies: { 'random-token': '0.0.8' },
+68 silly install resolved     devDependencies: { mocha: '^2.2.4', mongoose: '^4.0.2', should: '^6.0.1' },
+68 silly install resolved     homepage: 'https://github.com/kukulili-labs/mongoose-id-token',
+68 silly install resolved     keywords: [ 'mongoose', 'auto-increment', 'token', '_id', 'id' ],
+68 silly install resolved     engines: { node: '>=0.10.0' },
+68 silly install resolved     repository:
+68 silly install resolved      { type: 'git',
+68 silly install resolved        url: 'git+ssh://git@github.com/kukulili-labs/mongoose-id-token.git' },
+68 silly install resolved     main: 'lib/mongoose-id-token.js',
+68 silly install resolved     directories: { example: 'examples' },
+68 silly install resolved     scripts: { test: 'mocha --require should ./tests/*' },
+68 silly install resolved     licenses: [ [Object] ],
+68 silly install resolved     gitHead: '15f37c900e1397c6b60b08e90766e03fbb446b9f',
+68 silly install resolved     bugs: { url: 'https://github.com/kukulili-labs/mongoose-id-token/issues' },
+68 silly install resolved     _id: 'mongoose-id-token@0.0.3',
+68 silly install resolved     _shasum: 'f427772052af49f329645e6dc6f94f1bf75de7cd',
+68 silly install resolved     _from: 'mongoose-id-token@*',
+68 silly install resolved     _npmVersion: '2.7.5',
+68 silly install resolved     _nodeVersion: '0.10.33',
+68 silly install resolved     _npmUser: { name: 'kukulili-labs', email: 'smueller@kukulili-labs.com' },
+68 silly install resolved     dist:
+68 silly install resolved      { shasum: 'f427772052af49f329645e6dc6f94f1bf75de7cd',
+68 silly install resolved        tarball: 'http://registry.npmjs.org/mongoose-id-token/-/mongoose-id-token-0.0.3.tgz' },
+68 silly install resolved     maintainers: [ [Object] ],
+68 silly install resolved     _resolved: 'https://registry.npmjs.org/mongoose-id-token/-/mongoose-id-token-0.0.3.tgz',
+68 silly install resolved     readme: 'ERROR: No README data found!' } ]
+69 info install mongoose-id-token@0.0.3 into /home/higor/Documentos/node/crud
+70 info installOne mongoose-id-token@0.0.3
+71 verbose installOne of mongoose-id-token to /home/higor/Documentos/node/crud not in flight; installing
+72 verbose lock using /home/higor/.npm/_locks/mongoose-id-token-0701283f7a427fe1.lock for /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+73 silly install write writing mongoose-id-token 0.0.3 to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+74 verbose unbuild node_modules/mongoose-id-token
+75 info preuninstall mongoose-id-token@0.0.3
+76 info uninstall mongoose-id-token@0.0.3
+77 verbose unbuild rmStuff mongoose-id-token@0.0.3 from /home/higor/Documentos/node/crud/node_modules
+78 info postuninstall mongoose-id-token@0.0.3
+79 silly gentlyRm /home/higor/Documentos/node/crud/node_modules/mongoose-id-token is being purged from base /home/higor/Documentos/node/crud
+80 verbose gentlyRm don't care about contents; nuking /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+81 silly vacuum-fs purging /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+82 silly vacuum-fs quitting because other entries in /home/higor/Documentos/node/crud/node_modules
+83 verbose tar unpack /home/higor/.npm/mongoose-id-token/0.0.3/package.tgz
+84 verbose tar unpacking to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+85 silly gentlyRm /home/higor/Documentos/node/crud/node_modules/mongoose-id-token is being purged
+86 verbose gentlyRm don't care about contents; nuking /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+87 silly gunzTarPerm modes [ '755', '644' ]
+88 silly gunzTarPerm extractEntry package.json
+89 silly gunzTarPerm extractEntry .npmignore
+90 silly gunzTarPerm extractEntry README.md
+91 silly gunzTarPerm extractEntry .idea/.name
+92 silly gunzTarPerm extractEntry .idea/compiler.xml
+93 silly gunzTarPerm extractEntry .idea/copyright/profiles_settings.xml
+94 silly gunzTarPerm extractEntry .idea/jsLibraryMappings.xml
+95 silly gunzTarPerm extractEntry .idea/libraries/mongoose_id_token_node_modules.xml
+96 silly gunzTarPerm extractEntry .idea/misc.xml
+97 silly gunzTarPerm extractEntry .idea/modules.xml
+98 silly gunzTarPerm extractEntry .idea/uiDesigner.xml
+99 silly gunzTarPerm extractEntry .idea/vcs.xml
+100 silly gunzTarPerm extractEntry .idea/workspace.xml
+101 silly gunzTarPerm extractEntry .travis.yml
+102 silly gunzTarPerm extractEntry lib/mongoose-id-token.js
+103 silly gunzTarPerm extractEntry mongoose-id-token.iml
+104 silly gunzTarPerm extractEntry tests/mongoose-id-token.test.js
+105 verbose write writing to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/package.json
+106 info preinstall mongoose-id-token@0.0.3
+107 verbose readDependencies loading dependencies from /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/package.json
+108 silly prepareForInstallMany adding random-token@0.0.8 from mongoose-id-token dependencies
+109 verbose readDependencies loading dependencies from /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/package.json
+110 silly cache add args [ 'random-token@0.0.8', null ]
+111 verbose cache add spec random-token@0.0.8
+112 silly cache add parsed spec Result {
+112 silly cache add   raw: 'random-token@0.0.8',
+112 silly cache add   scope: null,
+112 silly cache add   name: 'random-token',
+112 silly cache add   rawSpec: '0.0.8',
+112 silly cache add   spec: '0.0.8',
+112 silly cache add   type: 'version' }
+113 silly addNamed random-token@0.0.8
+114 verbose addNamed "0.0.8" is a plain semver version for random-token
+115 silly mapToRegistry name random-token
+116 silly mapToRegistry using default registry
+117 silly mapToRegistry registry https://registry.npmjs.org/
+118 silly mapToRegistry uri https://registry.npmjs.org/random-token
+119 verbose addNameVersion registry:https://registry.npmjs.org/random-token not in flight; fetching
+120 verbose request uri https://registry.npmjs.org/random-token
+121 verbose request no auth needed
+122 info attempt registry request try #1 at 13:37:22
+123 verbose etag "C6AZT6XBDE2CYC7P0LP6JZLXQ"
+124 http request GET https://registry.npmjs.org/random-token
+125 http 304 https://registry.npmjs.org/random-token
+126 silly get cb [ 304,
+126 silly get   { date: 'Thu, 01 Oct 2015 16:37:23 GMT',
+126 silly get     via: '1.1 varnish',
+126 silly get     'cache-control': 'max-age=60',
+126 silly get     etag: '"C6AZT6XBDE2CYC7P0LP6JZLXQ"',
+126 silly get     age: '16',
+126 silly get     connection: 'keep-alive',
+126 silly get     'x-served-by': 'cache-iad2149-IAD',
+126 silly get     'x-cache': 'HIT',
+126 silly get     'x-cache-hits': '1',
+126 silly get     'x-timer': 'S1443717443.296947,VS0,VE0',
+126 silly get     vary: 'Accept' } ]
+127 verbose etag https://registry.npmjs.org/random-token from cache
+128 verbose get saving random-token to /home/higor/.npm/registry.npmjs.org/random-token/.cache.json
+129 silly cache afterAdd random-token@0.0.8
+130 verbose afterAdd /home/higor/.npm/random-token/0.0.8/package/package.json not in flight; writing
+131 verbose afterAdd /home/higor/.npm/random-token/0.0.8/package/package.json written
+132 silly install resolved [ { name: 'random-token',
+132 silly install resolved     description: 'Random token generation of given size',
+132 silly install resolved     version: '0.0.8',
+132 silly install resolved     main: 'index.js',
+132 silly install resolved     scripts: { test: 'node test/test.js', prepublish: 'npm test' },
+132 silly install resolved     repository: { type: 'git', url: 'git://github.com/ashnur/random-token.git' },
+132 silly install resolved     bugs: { url: 'https://github.com/ashnur/random-token/issues' },
+132 silly install resolved     keywords: [ 'token', 'token-generator', 'key', 'keygen', 'random-token' ],
+132 silly install resolved     author: { name: 'ashnur' },
+132 silly install resolved     license: 'BSD-2-Clause',
+132 silly install resolved     homepage: 'https://github.com/ashnur/random-token',
+132 silly install resolved     _id: 'random-token@0.0.8',
+132 silly install resolved     dist:
+132 silly install resolved      { shasum: '1cf845af3fb31e57f7caa4b9a173478c46483b61',
+132 silly install resolved        tarball: 'http://registry.npmjs.org/random-token/-/random-token-0.0.8.tgz' },
+132 silly install resolved     _from: 'random-token@0.0.8',
+132 silly install resolved     _npmVersion: '1.4.6',
+132 silly install resolved     _npmUser: { name: 'ashnur', email: 'ashnur@gmail.com' },
+132 silly install resolved     maintainers: [ [Object] ],
+132 silly install resolved     directories: {},
+132 silly install resolved     _shasum: '1cf845af3fb31e57f7caa4b9a173478c46483b61',
+132 silly install resolved     _resolved: 'https://registry.npmjs.org/random-token/-/random-token-0.0.8.tgz',
+132 silly install resolved     readme: 'ERROR: No README data found!' } ]
+133 info install random-token@0.0.8 into /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+134 info installOne random-token@0.0.8
+135 verbose installOne of random-token to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token not in flight; installing
+136 verbose lock using /home/higor/.npm/_locks/random-token-bd551c77ea97e048.lock for /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+137 silly install write writing random-token 0.0.8 to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+138 verbose unbuild node_modules/mongoose-id-token/node_modules/random-token
+139 silly gentlyRm /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token is being purged from base /home/higor/Documentos/node/crud
+140 verbose gentlyRm don't care about contents; nuking /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+141 verbose tar unpack /home/higor/.npm/random-token/0.0.8/package.tgz
+142 verbose tar unpacking to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+143 silly gentlyRm /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token is being purged
+144 verbose gentlyRm don't care about contents; nuking /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+145 silly gunzTarPerm modes [ '755', '644' ]
+146 silly gunzTarPerm extractEntry package.json
+147 silly gunzTarPerm extractEntry .npmignore
+148 silly gunzTarPerm extractEntry README.md
+149 silly gunzTarPerm extractEntry index.js
+150 silly gunzTarPerm extractEntry LICENSE.md
+151 silly gunzTarPerm extractEntry test/test.js
+152 verbose write writing to /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token/package.json
+153 info preinstall random-token@0.0.8
+154 verbose readDependencies loading dependencies from /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token/package.json
+155 verbose readDependencies loading dependencies from /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token/package.json
+156 silly install resolved []
+157 verbose about to build /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+158 info build /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+159 info linkStuff random-token@0.0.8
+160 silly linkStuff random-token@0.0.8 has /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules as its parent node_modules
+161 verbose linkBins random-token@0.0.8
+162 verbose linkMans random-token@0.0.8
+163 verbose rebuildBundles random-token@0.0.8
+164 info install random-token@0.0.8
+165 info postinstall random-token@0.0.8
+166 verbose unlock done using /home/higor/.npm/_locks/random-token-bd551c77ea97e048.lock for /home/higor/Documentos/node/crud/node_modules/mongoose-id-token/node_modules/random-token
+167 verbose about to build /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+168 info build /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+169 info linkStuff mongoose-id-token@0.0.3
+170 silly linkStuff mongoose-id-token@0.0.3 has /home/higor/Documentos/node/crud/node_modules as its parent node_modules
+171 verbose linkBins mongoose-id-token@0.0.3
+172 verbose linkMans mongoose-id-token@0.0.3
+173 verbose rebuildBundles mongoose-id-token@0.0.3
+174 verbose rebuildBundles [ 'random-token' ]
+175 info install mongoose-id-token@0.0.3
+176 info postinstall mongoose-id-token@0.0.3
+177 verbose unlock done using /home/higor/.npm/_locks/mongoose-id-token-0701283f7a427fe1.lock for /home/higor/Documentos/node/crud/node_modules/mongoose-id-token
+178 verbose validateInstall loading /home/higor/Documentos/node/crud/package.json for validation
+179 verbose stack Error: The package mongoose@4.1.8 does not satisfy its siblings' peerDependencies requirements!
+179 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+179 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+179 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+179 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+179 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+179 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+179 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+179 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+179 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+179 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+180 verbose cwd /home/higor/Documentos/node/crud
+181 error Linux 3.16.0-50-generic
+182 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "mongoose-id-token" "--save"
+183 error node v4.1.0
+184 error npm  v2.14.3
+185 error code EPEERINVALID
+186 error peerinvalid The package mongoose@4.1.8 does not satisfy its siblings' peerDependencies requirements!
+186 error peerinvalid Peer mongoose-auto-number@1.0.1 wants mongoose@^4.x
+186 error peerinvalid Peer mongoose-auto-increment@4.0.0 wants mongoose@~4.0.0
+187 verbose exit [ 1, true ]

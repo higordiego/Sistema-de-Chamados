@@ -2,7 +2,9 @@ module.exports = function(app){
   var Tecnico = app.models.tecnico;
   var tecnicoControle = {
     cadastrar: function(req,res){
-      res.render('sgc/tecnico/cadastrar');
+      res.render('sgc/tecnico/cadastrar',{
+        user: req.user
+      });
     },
     inserir: function(req,res){
       req.assert('nome', 'required').notEmpty();
@@ -48,7 +50,8 @@ module.exports = function(app){
           res.json(err);
         }else{
           res.render('sgc/tecnico/alterar',{
-            tecnico: tecnico
+            tecnico: tecnico,
+            user: req.user
           });
         }
       });
