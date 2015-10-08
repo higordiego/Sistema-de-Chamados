@@ -73,26 +73,47 @@ module.exports = function(app){
     },
     listarTecnico: function(req,res){
       var id = req.user._id;
-        Chamados.find({resolvido: 0,user: req.user._id}).populate({
-          path: 'user',
-          select: 'email admin nome'
-        }).populate('chamados').exec(function (err, chamados) {
-          if (err) {
-            res.json(err);
-          } else {
-            for (var i = 0; i < chamados.length; i++) {
-              if(chamados[i].prioridade == 1){
-                chamados[i].prioridade = 'Alta';
-              } else if(chamados[i].prioridade == 2){
-                chamados[i].prioridade = 'Média';
-              }else{
-                chamados[i].prioridade = 'Baixa';
-              }
+      Chamados.find({resolvido: 0,user: req.user._id}).populate({
+        path: 'user',
+        select: 'email admin nome'
+      }).populate('chamados').exec(function (err, chamados) {
+        if (err) {
+          res.json(err);
+        } else {
+          for (var i = 0; i < chamados.length; i++) {
+            if(chamados[i].prioridade == 1){
+              chamados[i].prioridade = 'Alta';
+            } else if(chamados[i].prioridade == 2){
+              chamados[i].prioridade = 'Média';
+            }else{
+              chamados[i].prioridade = 'Baixa';
             }
-            res.json(chamados);
           }
-        });
+          res.json(chamados);
+        }
+      });
 
+    },
+    listarApi: function(req,res){
+      Chamados.find({resolvido: 0,user: req.body.user}).populate({
+        path: 'user',
+        select: 'email admin nome'
+      }).populate('chamados').exec(function (err, chamados) {
+        if (err) {
+          res.json(err);
+        } else {
+          for (var i = 0; i < chamados.length; i++) {
+            if(chamados[i].prioridade == 1){
+              chamados[i].prioridade = 'Alta';
+            } else if(chamados[i].prioridade == 2){
+              chamados[i].prioridade = 'Média';
+            }else{
+              chamados[i].prioridade = 'Baixa';
+            }
+          }
+          res.json(chamados);
+        }
+      });
     },
     update: function(req,res){
       if(req.user.admin == true){
@@ -107,8 +128,13 @@ module.exports = function(app){
       }
     },
     deletar: function(req,res){
-        Chamados.remove({_id: req.params.id},function(err){
-        });
+      Chamados.remove({_id: req.params.id},function(err){
+      });
+    },
+    deletarApi: function(req,res){
+      Chamados.remove({_id: req.body.chamado},function(err){
+        res.json({chamado: true});
+      });
     },
     cancelar: function(req,res){
       res.render('sgc/chamados/cancelar',{
@@ -134,6 +160,17 @@ module.exports = function(app){
           }
           res.json(chamados);
         }
+      });
+    },
+    add: function(req,res){
+      var chamados = new Chamados();
+      chamados.tecnico = req.body.chamado.tecnico._id;
+      chamados.problema = req.body.chamado.problema;
+      chamados.observacao = req.body.chamado.observacao;
+      chamados.prioridade = req.body.chamado.prioridade;
+      chamados.user = req.body.chamado.user;
+      chamados.save(function(err,chamados){
+        res.json(true);
       });
     }
   };

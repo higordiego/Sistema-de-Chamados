@@ -1,7 +1,20 @@
 module.exports = function(app){
   var   autenticar = require('../middleware/autenticador')
   , passport = require('passport')
-  , user = app.controllers.user;
+  , user = app.controllers.user
+  , userApi = app.controllers.userApi;
+
+//Mobile..
+app.get('/api/loginfail', function(req, res){
+  res.status(403).json({login: false});
+});
+
+
+app.post('/api/login', passport.authenticate('local', { failureRedirect: '/api/loginfail'}), userApi.user);
+
+
+  //Sistema Web
+
   app.get('/sgc/user/cadastrar', function(req,res){
     res.render('sgc/usuario/cadastrar',{
       user: req.user

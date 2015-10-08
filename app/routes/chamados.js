@@ -3,6 +3,11 @@ module.exports = function(app){
   , passport = require('passport')
   , chamados = app.controllers.chamados;
 
+//Api
+  app.post('/api/chamados/listar'          , chamados.listarApi);
+  app.post('/api/chamados/add'             , chamados.add);
+  app.post('/api/chamados/deletar'         , chamados.deletarApi);
+//SoftWeb
   app.post('/sgc/chamados/inserir'        , autenticar.loginSistema, chamados.inserir);
   app.post('/sgc/chamados/listar'         , autenticar.loginSistema, chamados.listar);
   app.post('/sgc/chamados/update:id'      , autenticar.loginSistema, chamados.update);

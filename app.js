@@ -12,6 +12,7 @@ var express = require('express')
 , passportHttp  = require('passport-http')
 , flash = require('express-flash')
 , expressValidator = require('express-validator')
+, cors = require('cors')
 , app = express();
 
 
@@ -35,6 +36,7 @@ db.once('open', function() {
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
+app.use(cors());
 //Acessar arquivos publico
 app.use(express.static(path.join(__dirname, 'public')));
 // uncomment after placing your favicon in /public

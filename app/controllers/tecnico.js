@@ -59,6 +59,11 @@ module.exports = function(app){
     },
     excluir: function(req,res){
 
+    },
+    listar: function(req,res){
+      Tecnico.find(function(err,tecnico){
+        res.json(tecnico);
+      });
     }
   };
   return tecnicoControle;

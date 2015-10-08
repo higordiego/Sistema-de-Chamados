@@ -1,0 +1,44 @@
+
+<div class="container" >
+  <form class="form-horizontal"  action="/sgc/servicos/inserir" method="post"  enctype='multipart/form-data'>
+    <fieldset>
+      <!-- Form Name -->
+      <legend>Cadastro de Serviços</legend>
+      <% if(messages.msg == 2){ %>
+        <div class="alert alert-info">
+          <strong>Servico cadastrado com sucesso! </strong>
+        </div>
+        <% } %>
+        <% if(messages.msg == 3){ %>
+          <div class="alert alert-warning">
+            <strong>Servicos já possui Cadastrado!</strong>
+          </div>
+          <% } %>
+
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Nome </label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" name="nome" placeholder=""  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Descrição</label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" name="descricao" placeholder=""  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="control-label col-xs-4">Imagem</label>
+            <div class="col-xs-4">
+              <input name="img" class="input-file" type="file">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-offset-7 col-xs-10">
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
