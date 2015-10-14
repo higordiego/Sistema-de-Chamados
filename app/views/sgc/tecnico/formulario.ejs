@@ -1,0 +1,89 @@
+<script type="text/javascript">
+/* Máscaras ER */
+function mascara(o,f){
+  v_obj=o
+  v_fun=f
+  setTimeout("execmascara()",1)
+}
+function execmascara(){
+  v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+  v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+  v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+  v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+  return v;
+}
+function id( el ){
+  return document.getElementById( el );
+}
+window.onload = function(){
+  id('telefone1').onkeypress = function(){
+    mascara( this, mtel );
+  }
+  id('telefone2').onkeypress = function(){
+    mascara( this, mtel );
+  }
+
+}
+</script>
+<div class="container" >
+  <form class="form-horizontal"  action="/sgc/tecnicos/inserir" method="post" >
+    <fieldset>
+      <!-- Form Name -->
+      <legend>Cadastro de Técnico</legend>
+      <% if(messages.msg == 2){ %>
+        <div class="alert alert-info">
+          <strong>Técnico cadastrado com sucesso! </strong>
+        </div>
+        <% } %>
+        <% if(messages.msg == 3){ %>
+          <div class="alert alert-warning">
+            <strong>Técnico já possui Cadastrado!</strong>
+          </div>
+          <% } %>
+
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Nome </label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" name="nome" placeholder="Nome Completo"  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Email</label>
+            <div class="col-xs-4">
+              <input type="email" class="form-control" name="email" placeholder="teste@teste.com.br"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Telefone 1</label>
+            <div class="col-xs-2">
+              <input type="text" id="telefone1" maxlength="15" class="form-control" name="numero1" placeholder="Telefone com DD"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Telefone 2</label>
+            <div class="col-xs-2">
+              <input type="text" id="telefone2" maxlength="15" class="form-control" name="numero2" placeholder="Telefone com DD" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Endereço</label>
+            <div class="col-xs-4">
+              <input type="text" class="form-control" name="endereco" placeholder="Rua e Numero" required  />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-4">Cidade</label>
+            <div class="col-xs-3">
+              <input type="text" class="form-control" name="cidade" placeholder="Juazeiro do Norte - CE" required  />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-offset-7 col-xs-10">
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>

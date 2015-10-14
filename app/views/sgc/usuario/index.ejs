@@ -1,0 +1,55 @@
+<script src="../../controllers/users.js"></script>
+<div class="container" ng-controller="userCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Lista de Usuários</h4>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thread>
+            <tr>
+              <th>Nome </th>
+              <th>email </th>
+              <th>senha </th>
+              <th>Permissão</th>
+              <th>Ações </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input class="form-control" ng-model="users.nome">
+              </td>
+              <td>
+                <input type="text" class="form-control" ng-model="users.email">
+              </td>
+              <td>
+                <input type="password" class="form-control" ng-model="users.password">
+              </td>
+              <td>
+                <select ng-model="users.admin" class="form-control">
+                  <option value="">Selecione</option>
+                  <option value="1">Comum</option>
+                  <option value="2">Administrador</option>
+                </select>
+              </td>
+              <td>
+                <button type="submit" class="btn btn-primary" ng-click="addUser()">Adicionar</button>
+                <button type="submit" class="btn btn-info" ng-click="update()"> Alterar </button>
+              </td>
+              <tr ng-repeat="users in userslist">
+                <td> {{users.nome}} </td>
+                <td> {{users.email}} </td>
+                <td> {{users.password}} </td>
+                <td> {{users.admin}} </td>
+                <td>
+                  <button class="btn btn-warning" ng-click="edit(users._id)">Editar</button>
+                  <button class="btn btn-danger" ng-click="remove(users._id)">Remover</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
