@@ -18,7 +18,7 @@ var express = require('express')
 
 //Conexão com Banco de Dados
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/app', function(err){
+mongoose.connect('mongodb://chamados:chamados@ds051903.mongolab.com:51903/chamados', function(err){
   // mongoose.connect('mongodb://chamados:chamados@ds051903.mongolab.com:51903/chamados', function(err){
   if( err ) {
     console.log("Error conectar mongo db: " + err);
