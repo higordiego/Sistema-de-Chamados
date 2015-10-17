@@ -4,9 +4,9 @@ module.exports = function(app){
   , chamados = app.controllers.chamados;
 
 //Api
-  app.post('/api/chamados/listar'          , chamados.listarApi);
-  app.post('/api/chamados/add'             , chamados.add);
-  app.post('/api/chamados/deletar'         , chamados.deletarApi);
+  app.post('/api/chamados/listar'          ,passport.authenticate('basic', { session: false }), chamados.listarApi);
+  app.post('/api/chamados/add'             ,passport.authenticate('basic', { session: false }), chamados.add);
+  app.post('/api/chamados/deletar'         ,passport.authenticate('basic', { session: false }), chamados.deletarApi);
 //SoftWeb
   app.post('/sgc/chamados/inserir'        , autenticar.loginSistema, chamados.inserir);
   app.post('/sgc/chamados/listar'         , autenticar.loginSistema, chamados.listar);

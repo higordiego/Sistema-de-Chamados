@@ -9,8 +9,8 @@ module.exports = {
 		if(req.isAuthenticated()) {
 			return next();
 		} else {
-			console.log(req.header);
-			res.send(403);
+			console.log(req);
+			res.sendStatus(403);
 		}
 	}
 };

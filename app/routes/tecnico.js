@@ -4,5 +4,5 @@ module.exports = function(app){
   , tecnico = app.controllers.tecnico;
   app.post('/sgc/tecnicos/inserir'  , autenticar.loginSistema, tecnico.inserir);
   //Api
-  app.get('/api/tecnicos/listar'    , tecnico.listar);
+  app.get('/api/tecnicos/listar'    , passport.authenticate('basic', { session: false }), tecnico.listar);
 }

@@ -5,6 +5,7 @@ module.exports = function(app) {
 	var UserController = {
 		user: function(req,res){
 			var _id = req.user._id;
+			//console.log(req.isAuthenticated());
 			User.findById(_id,function(err, user){
 				if(err) {
 					console.log('Error: ', err);
